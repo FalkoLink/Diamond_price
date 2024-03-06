@@ -4,6 +4,7 @@
 ### **Sultan Kudaybergenov**, 
 ### **Alua Orynbassarova**, 
 ### **Zhanmadi Toleugazyuly**
+### [YouTube Video](https://youtu.be/9gDdshN4hrQ?si=rCtVmWFeU9rlP17n)
 
 <br>
 <br>
