@@ -154,7 +154,7 @@ R-square = 1 - (SSres / SStot)
 
 sns.scatterplot(x=y\_test, y=y\_test\_pred2, color="pink")
 
-`      `plt.title('Real vs Predicted test values for Decision Tree')
+plt.title('Real vs Predicted test values for Decision Tree')
 
 plt.xlabel('Real')
 
