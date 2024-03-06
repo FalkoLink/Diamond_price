@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Predictor</title>
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+</head>
+<body class="vh-100" style="background: url('static/img/background.jpg') no-repeat center; background-size: cover;">
+	<div class="container pt-5">
+		<div class="d-flex justify-content-center">
+			<div class="bg-light px-5 py-4 rounded-3">
+				<h1>Diamond Price Predictor</h1>
+				<form action="/predict" method="post">
+						<label for="carat">Carat:</label>
+						<input type="number" step="0.01" max="1" class="form-control mb-4" id="carat" name="carat" required>
+						<div class="d-flex justify-content-between">
+						<div>
+							<label for="cut">Cut:</label>
+							<select class="form-select mb-4" name="cut" aria-label="Default select example" required>
+								<option value="1">Fair</option>
+								<option value="2">Very Good</option>
+								<option value="3">Good</option>
+								<option value="4">Premium</option>
+								<option value="5">Ideal</option>
+							</select>
+						</div>
+						<div>
+							<label for="color">Color:</label>
+							<select class="form-select mb-4" name="color" aria-label="Default select example" required>
+								<option value="1">D</option>
+								<option value="2">E</option>
+								<option value="3">F</option>
+								<option value="4">G</option>
+								<option value="5">H</option>
+								<option value="6">I</option>
+								<option value="7">J</option>
+							</select>
+						</div>
+						<div>
+							<label for="clarity">Clarity:</label>
+							<select class="form-select mb-4" name="clarity" type="number" aria-label="Clarity" required>
+								<option value="1">I1</option>
+								<option value="8">IF</option>
+								<option value="3">SI1</option>
+								<option value="2">SI2</option>
+								<option value="5">VS1</option>
+								<option value="4">VS2</option>
+								<option value="6">VVS1</option>
+								<option value="7">VVS2</option>
+							</select>
+						</div>
+						</div>
+						<label for="depth">Depth:</label>
+						<input type="number" step="0.1" class="form-control mb-4" id="depth" name="depth" required>
+
+						<label for="table">Table:</label>
+						<input type="number" step="0.1" class="form-control mb-4" id="table" name="table" required>
+
+						<label for="volume">Volume:</label>
+						<input type="number" step="0.0001" class="form-control mb-4" id="volume" name="volume" required>
+
+						<input type="submit" class="btn btn-primary" value="Price">
+				</form>
+
+				{% if price %}
+				<h2 class="mt-4 text-success">Predicted Price:</h2>
+				<h3 class="text-success">{{ price }}$</h3>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
